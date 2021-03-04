@@ -1,0 +1,72 @@
+
+/* Sliders
+***********************************/
+
+/********************/
+
+
+/*  Main Layout
+***********************************/
+
+.pagecontainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 250px 400px 400px;
+  grid-template-areas:
+  "adjustments_Block colorBox"
+  "adjustments_Block colorBox"
+  "adjustments_Block feutures";
+}
+.adjustments_Block {
+  grid-area: adjustments_Block;
+}
+.colorsBox {
+  grid-area: colorBox;
+}
+.feutures {
+  grid-area: feutures;
+}
+
+.tab {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 60px;
+  grid-template-areas:
+  "HSL_Tab RGB_Tab";
+}
+.HSL_Tab {
+  grid-area: HSL_Tab;
+}
+.RGB_Tab {
+  grid-area: RGB_Tab;
+}
+.tabcontent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100%;
+  grid-template-areas:
+  "columnOne columnTwo columnThree";
+}
+.columnOne {
+  grid-area: columnOne;
+}
+.columnTwo {
+  grid-area: columnTwo;
+}
+.columnThree {
+  grid-area: columnThree;
+}
+
+.feutures {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+  "feutureTabs feutureContents";
+}
+.feutureTabs {
+  grid-area: feutureTabs;
+}
+.feutureContents {
+  grid-area: feutureContents;
+}
+/********************/

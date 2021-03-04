@@ -1,0 +1,54 @@
+.directionalBox {
+  height: 100px;
+  margin: 10px;
+}
+
+.selectedRightColor, .selectedLeftColor {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  margin: 10px;
+}
+
+
+/* Layout */
+/* ******************************* */
+
+.directionGradient {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  'selectedLeftColor selectedLeftColor selectedLeftColor selectedLeftColor selectedRightColor selectedRightColor selectedRightColor selectedRightColor'
+  'toBottom toRight toTopLeft toTopRight toTop toLeft toBottomLeft toBottomright';
+}
+.selectedLeftColor {
+  grid-area: selectedLeftColor;
+}
+.selectedRightColor {
+  grid-area: selectedRightColor;
+}
+.toBottom {
+  grid-area: toBottom;
+}
+.toRight {
+  grid-area: toRight;
+}
+.toTopLeft {
+  grid-area: toTopLeft;
+}
+.toTopRight {
+  grid-area: toTopRight;
+}
+.toTop {
+  grid-area: toTop;
+}
+.toLeft {
+  grid-area: toLeft;
+}
+.toBottomLeft {
+  grid-area: toBottomLeft;
+}
+.toBottomright {
+  grid-area: toBottomright;
+}
+/* ***************** */

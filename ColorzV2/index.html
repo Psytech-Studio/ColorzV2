@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/customSlider.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/styling.css">
+    <link rel="stylesheet" href="css/gradient.css">
+    <link rel="stylesheet" href="css/lister.css">
+  </head>
+  <body>
+
+
+        <!-- Page Wrapper -->
+        <div class="pagecontainer">
+
+
+
+
+            <!-- Container Left With HUE and RGB Tabs and Contents -->
+            <div class="adjustments_Block">
+              <!-- **********  Tabs
+              ***************************-->
+              <div class="tab">
+                <div class="HSL_Tab tablinks active" onclick="openTabItem(event, 'hsl')"><h1>HSL</h1></div>
+                <div class="RGB_Tab tablinks" onclick="openTabItem(event, 'rgb')"><h1>RGB</h1></div>
+              </div>
+              <!-- ****************************************** -->
+              <!-- ********** Content
+              ****************************-->
+              <div id='hsl' class="HSL_ContainerAdjust tabcontent">
+                      <div class="columnOne">
+                          <h1 class="textHue">Hue</h1>
+                          <div class="hueSliderBox slider">
+                              <input type="range" orient="vertical" max="360" min="0" value="200" class="hueSlider">
+                          </div>
+                          <div class="hueValue">
+                              <input type="number" min="0" max="360" value="200">
+                          </div>
+                      </div>
+                      <div class="columnTwo">
+                          <h1 class="textSat"> Sat </h1>
+                          <div class="satSliderBox slider">
+                              <input type="range" orient="vertical" max="100" min="0" value="50" class="satSlider">
+                          </div>
+                          <div class="saturationValue">
+                              <input type="number" min="0" max="100" value="50">
+                          </div>
+                      </div>
+                      <div class="columnThree">
+                          <h1 class="textLum"> Lum </h1>
+                          <div class="lumSliderBox slider">
+                              <input type="range" orient="vertical" max="100" min="0" value="50" class="lumSlider">
+                          </div>
+                          <div class="luminaceValue">
+                              <input type="number" min="0" max="100" value="50">
+                          </div>
+                      </div>
+
+              </div>
+
+              <div id='rgb' class="RGB_ContainerAdjust tabcontent" style="display: none;">
+                    <div class="columnOne">
+                        <h1 class="textRed">Red</h1>
+                        <div class="redSliderBox slider">
+                            <input type="range" orient="vertical" max="255" min="0" value="50" class="redSlider">
+                        </div>
+                        <div class="redValue">
+                            <input type="number" min="0" max="255" value="50">
+                        </div>
+                    </div>
+                    <div class="columnTwo">
+                        <h1 class="textGreen"> Green </h1>
+                        <div class="greenSliderBox slider">
+                            <input type="range" orient="vertical" max="255" min="0" value="50" class="greenSlider">
+                        </div>
+                        <div class="greenValue">
+                            <input type="number" min="0" max="255" value="50">
+                        </div>
+                    </div>
+                    <div class="columnThree">
+                        <h1 class="textBlue"> Blue </h1>
+                        <div class="blueSliderBox slider">
+                            <input type="range" orient="vertical" max="255" min="0" value="50" class="blueSlider">
+                        </div>
+                        <div class="blueValue">
+                            <input type="number" min="0" max="255" value="50">
+                        </div>
+                    </div>
+
+              </div>
+
+            </div>
+
+            <!-- Color Display Box
+            ********************-->
+            <div class="colorsBox" style="border: none !importand;">
+
+            </div>
+            <!--******************-->
+            <!-- Feutures -->
+            <div class="feutures">
+              <div class="feutureTabs">
+                <div>
+                    <div class="colorInfo feuturesTablinks active" onclick="openFeuturesTabItem(event, 'colorInfoArea')"><h1>Color Info</h1></div>
+                </div>
+                <div>
+                    <div class="gradients feuturesTablinks" onclick="openFeuturesTabItem(event, 'gradientsArea')"><h1>Gradients</h1></div>
+                </div>
+                <div>
+                    <div class="pallets feuturesTablinks" onclick="openFeuturesTabItem(event, 'palletsArea')"><h1>Pallets</h1></div>
+                </div>
+
+              </div>
+              <div class="feutureContents">
+                <div id="colorInfoArea" class="feuturesTabcontent">
+                  <div>
+                      <input type="text" class="rgbString" value=""><span>RGB</span>
+                  </div>
+                  <div>
+                      <input type="text" class="hslString" value=""><span>HSL</span>
+                  </div>
+                  <div>
+                      <input type="text" class="rgbHexString" value=""><span>#</span>
+                  </div>
+                </div>
+                <div id="gradientsArea" class="feuturesTabcontent" style="display: none;">
+                  <!-- Gradient Section -->
+                  <div id="gradient">
+                      <h1 class="tabHeading">Gradient</h1>
+
+
+
+                      <div class="directionGradient">
+                        <div class="selectedLeftColor">
+                            <h1>Select as 1st Color</h1>
+                        </div>
+                        <div class="selectedRightColor">
+                            <h1>Select as 2st Color</h1>
+                        </div>
+                        <div class="toBottom directionalBox"></div>
+                        <div class="toRight directionalBox"></div>
+                        <div class="toTopLeft directionalBox"></div>
+                        <div class="toTopRight directionalBox"></div>
+                        <div class="toTop directionalBox"></div>
+                        <div class="toLeft directionalBox"></div>
+                        <div class="toBottomLeft directionalBox"></div>
+                        <div class="toBottomright directionalBox"></div>
+                      </div>
+
+                  </div>
+                </div>
+                <div id="palletsArea" class="feuturesTabcontent" style="display: none;">
+                  <h1 class="tabHeading">List Color Pallete</h1>
+
+                  <div id="myDIV" class="header">
+                      <span onclick="newElement()" class="addBtn"> Add </span>
+                  </div>
+                  <ul id="myUL">
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <script src="js/jquery-3.3.1.js" charset="utf-8"></script>
+        <script src="js/colorConvertions.js" charset="utf-8"></script>
+        <script src="js/tabs.js" charset="utf-8"></script>
+        <script src="js/update.js" charset="utf-8"></script>
+        <script src="js/gradient.js" charset="utf-8"></script>
+        <script src="js/lister.js" charset="utf-8"></script>
+    </body>
+</html>
